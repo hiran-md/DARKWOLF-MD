@@ -82,5 +82,5 @@
 
 </details>
 <hr>
-<img src="http://readme-typing-svg.herokuapp.com?color=d1fa02&center=true&vCenter=true&multiline=false&lines=Created+By+WHITE+VIPER+INC" alt="">
+<img src="http://readme-typing-svg.herokuapp.com?color=d1fa02&center=true&vCenter=true&multiline=false&lines=CREATED+BY+HIRANYA+SATHSARA" alt="">
 <hr>
