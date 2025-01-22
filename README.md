@@ -14,7 +14,7 @@
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 <div align="center" class= "main"> 
-  <img src="https://raw.githubusercontent.com/hiran-md/Darkwolf-DATA_BASE/refs/heads/main/Logo/DARK_WOLF-MD.webp?token=GHSAT0AAAAAAC5GPW4IHCFRM4UFAVJVHRWAZ4Q7RLA"width="1024" height="700"/>
+  <img src="https://raw.githubusercontent.com/hiran-md/Darkwolf-DATA_BASE/refs/heads/main/Logo/DARK_WOLF-MD.webp?token=GHSAT0AAAAAAC5GPW4IHCFRM4UFAVJVHRWAZ4Q7RLA"width="500" height="400"/>
 
 
 
