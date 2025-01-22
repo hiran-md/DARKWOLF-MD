@@ -103,8 +103,8 @@ let up = `
 > © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʜɪʀᴜᴡᴀ
 *•────────────•⟢*
 `;
-conn.sendMessage(conn.user.id, { image: { url: `https://raw.githubusercontent.com/Reshantha1986/DARKWOLF-MD-V1/refs/heads/main/file-UtUL3R7BtcVRTn2Z2N21rv.webp` }, caption: up })
-conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url:'config.ALIVE_IMG'}, caption: up })
+conn.sendMessage(conn.user.id, { image: { url: `https://raw.githubusercontent.com/hiran-md/Darkwolf-DATA_BASE/refs/heads/main/Logo/DARK_WOLF-MD.webp?token=GHSAT0AAAAAAC5GPW4IHCFRM4UFAVJVHRWAZ4Q7RLA` }, caption: up })
+conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url:'https://raw.githubusercontent.com/hiran-md/Darkwolf-DATA_BASE/refs/heads/main/Logo/DARK_WOLF-MD.webp?token=GHSAT0AAAAAAC5GPW4IHCFRM4UFAVJVHRWAZ4Q7RLA'}, caption: up })
 }
 })
 conn.ev.on('creds.update', saveCreds)  
