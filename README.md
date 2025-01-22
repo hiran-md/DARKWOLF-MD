@@ -1,20 +1,20 @@
 <div align="center">
 
 
- [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=F01&lines=DINUWA+ＭＤ+V1+ＷＨＡＴＳＡＰＰ+ＢＯＴ)](https://git.io/typing-svg)
+ [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=F01&lines=DARKWOLF+ＭＤ+V1+ＷＨＡＴＳＡＰＰ+ＢＯＴ)](https://git.io/typing-svg)
 <img src="https://i.imgur.com/dBaSKWF.gif" height="90" width="100%">
 
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=100&pause=1000&color=1BAFBAFF&center=true&width=1000&height=200&lines=DINUWA+MD+BOT;WHITE+VIPER+OFC" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=100&pause=1000&color=1BAFBAFF&center=true&width=1000&height=200&lines=DARKWOLF+MD+BOT;HIRANYA+SATHSARA+GIMHAN" alt="Typing SVG" /></a>
   </p>
 
 
-<h1>𝗗𝗜𝗡𝗨𝗪𝗔-𝐌𝐃</h1>
+<h1>𝐃𝐀𝐑𝐊𝐖𝐎𝐋𝐅-𝐌𝐃</h1>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 <div align="center" class= "main"> 
-  <img src="https://i.postimg.cc/HntYvQzS/IMG-20250118-WA0013.jpg"width="300" height="300"/>
+  <img src="https://raw.githubusercontent.com/hiran-md/Darkwolf-DATA_BASE/refs/heads/main/Logo/DARK_WOLF-MD.webp?token=GHSAT0AAAAAAC5GPW4IHCFRM4UFAVJVHRWAZ4Q7RLA"width="400" height="300"/>
 
 
 
@@ -26,7 +26,7 @@
 
 ## 🔥 FOLLOW OUR CHANNELS
 
-<a href="[https://whatsapp.com/channel/0029VahMZasD8SE5GRwzqn3Z](https://whatsapp.com/channel/0029Vb352w8LNSa5GnqVkC3V)"><img src="https://img.shields.io/badge/Join%20Our%20WhatsApp%20Channel-blue" alt="📎 Join Our WhatsApp Channel" width="350"></a>
+<a href="(https://whatsapp.com/channel/0029Vb1TE4x6WaKwde5X8R2K)"><img src="https://img.shields.io/badge/Join%20Our%20WhatsApp%20Channel-blue" alt="📎 Join Our WhatsApp Channel" width="350"></a>
 
 <a href="my yt channel"><img src="https://img.shields.io/badge/Subscribe%20My%20Youtube%20Channel-blue" alt="📎 Subscribe My Youtube Channel" width="350"></a>
 
