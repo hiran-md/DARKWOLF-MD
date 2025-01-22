@@ -31,7 +31,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
         // Send the status message with an image
         await conn.sendMessage(from, { 
-            image: { url: `https://raw.githubusercontent.com/Reshantha1986/DARKWOLF-MD-V1/refs/heads/main/file-UtUL3R7BtcVRTn2Z2N21rv.webp` },  // Image URL
+            image: { url: `https://raw.githubusercontent.com/hiran-md/Darkwolf-DATA_BASE/refs/heads/main/Logo/DARK_WOLF-MD.webp` },  // Image URL
             caption: status,
             contextInfo: {
                 mentionedJid: [m.sender],
