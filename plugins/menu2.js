@@ -1,5 +1,9 @@
 const config = require('../config')
 const {cmd , commands} = require('../command')
+const os = require("os")
+const {runtime} = require('../lib/functions')
+const axios = require('axios')
+
 cmd({
     pattern: "menu2",
     react: "👾",
@@ -38,9 +42,22 @@ let madeMenu = `*╭─────────────────❒⁠⁠
    *ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴅᴀʀᴋᴡᴏʟꜰ_ᴍᴅ ғᴜʟʟ ᴄᴏᴍᴍᴀɴᴅ ʟɪsᴛ*
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-*ᴄʀᴇᴀᴛᴇᴅ ʙʏ ʜɪʀᴀɴʏᴀ ꜱᴀᴛʜꜱᴀʀᴀ👨🏻‍💻*
+*ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ʜɪʀᴀɴʏᴀ ꜱᴀᴛʜꜱᴀʀᴀ 👨🏻‍💻*
 
-
+*┌─〈 ${config.BOT_NAME} 〉─◆*
+*│╭─────────────···▸*
+*┴│▸*
+*❖│▸* *ʀᴜɴᴛɪᴍᴇ* : ${runtime(process.uptime())}
+*❖│▸* *ᴍᴏᴅᴇ* : *[${config.MODE}]*
+*❖│▸* *ᴘʀᴇғɪx* : *[${config.PREFIX}]*
+*❖│▸* *ʀᴀᴍ ᴜsᴇ* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
+*❖│▸* *ʙᴏᴛ ɴᴀᴍᴇ* : *❖ᴅᴀʀᴋᴡᴏʟꜰ_ᴍᴅ❖*
+*❖│▸* *ᴄʀᴇᴀᴛᴏʀ* : *➺ᴍʀ ʜɪʀᴀɴʏᴀ࿐*
+*❖│▸* *ᴠᴇʀsɪᴏɴs* : *ᴠ.1.0.0*
+*❖│▸* *ᴍᴇɴᴜ ᴄᴍᴅ* : *ᴍᴇɴᴜ ʟɪsᴛ*
+*┬│▸*
+*│╰────────────···▸▸*
+*└──────────────···▸*
 *╭───────────────❒⁠⁠⁠⁠*
 *│* *ᴍʀ ʜɪʀᴀɴʏᴀ ᴜᴩᴅᴀᴛᴇ*
 *┕───────────────❒*
