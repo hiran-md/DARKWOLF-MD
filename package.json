@@ -26,6 +26,7 @@
         "@sl-code-lords/photooxy": "1.0.1",
         "@sl-code-lords/si-subdl": "1.1.1",
         "@sl-code-lords/wabetainfo": "1.2.0",
+        "@sl-code-lords/movie-api": "1.0.0",
         "@tobyg74/tiktok-api-dl": "1.0.13",
         "@vitalets/google-translate-api": "9.2.0",
         "@whiskeysockets/baileys": "git+https://github.com/prabathLK/Baileys-6.0.0.git#master",
