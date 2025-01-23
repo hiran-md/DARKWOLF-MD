@@ -34,7 +34,7 @@ await conn.sendMessage(from, { text: repo ,
     forwardingScore: 999,
     isForwarded: false,
     forwardedNewsletterMessageInfo: {
-      newsletterJid: '120363232588171807@newsletter',
+      newsletterJid: '120363365603549809@newsletter',
       newsletterName: "ᴅᴀʀᴋᴡᴏʟꜰ_ᴍᴅ",
       serverMessageId: 999
     },
@@ -43,7 +43,7 @@ title: 'QUEEN SADU',
 body: `${pushname}`,
 mediaType: 1,
 sourceUrl: "https://github.com/hiran-md" ,
-thumbnailUrl: "https://i.postimg.cc/C5YSXhHr/20241225-020201.jpg)" ,
+thumbnailUrl: "https://raw.githubusercontent.com/Reshantha1986/DARKWOLF-MD-V1/refs/heads/main/file-UtUL3R7BtcVRTn2Z2N21rv.webp" ,
 renderLargerThumbnail: true,
 showAdAttribution: true
 }
