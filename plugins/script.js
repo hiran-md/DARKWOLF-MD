@@ -39,7 +39,7 @@ await conn.sendMessage(from, { text: repo ,
       serverMessageId: 999
     },
 externalAdReply: { 
-title: 'QUEEN SADU',
+title: 'DARK WOLF_MD',
 body: `${pushname}`,
 mediaType: 1,
 sourceUrl: "https://github.com/hiran-md" ,
