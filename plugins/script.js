@@ -19,7 +19,7 @@ let repo =`
 *|* *https://github.com/hiran-md/DARKWOLF-MD*
 
 > *SUPPORT CHANNEL:*
-*|* *https://whatsapp.com/channel/0029Vb0Anqe9RZAcEYc2fT2c*
+*|* *https://whatsapp.com/channel/0029Vb1TE4x6WaKwde5X8R2K*
 > * *SYSTEM SETTING:*
 *|* *ᴍʀ ʜɪʀᴀɴʏᴀ*
 *|* *94768698018*
