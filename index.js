@@ -91,14 +91,14 @@ let up = `
 *│  ◦*
 *│  ◦* *❁ ᴊᴏɪɴ ᴏᴜʀ ʏᴏᴜᴛᴜʙᴇ ᴄʜᴀɴɴᴇʟ ❁*
 *│  ◦*
-*│  ◦* *https://youtube.com/@hiruwatech2010
+*│  ◦* *https://youtube.com/@hiruwatech2010*
 *╰┈───────────────•*
 *[ •  B O T  - R E P O ‎ • ]*
 *╭┈───────────────•*
 *│✫➠ - 🌐URL:* *https://github.com/hiran-md*
 *╰┈───────────────•*
 *YOUR BOT ACTIVE NOW ENJOY♥️🪄*\n\n*PREFIX: [${prefix}]*
-*MODE : [config.MODE]*
+*MODE : [${config.MODE}]*
 *•────────────•⟢*
 > © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʜɪʀᴜᴡᴀ
 *•────────────•⟢*
