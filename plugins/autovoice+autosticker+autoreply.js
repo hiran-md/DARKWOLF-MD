@@ -34,7 +34,7 @@ async (conn, mek, m, { from, body, isOwner }) => {
             
             if (config.AUTO_STICKER === 'true') {
                 //if (isOwner) return;        
-                await conn.sendMessage(from,{sticker: { url : data[text]},package: 'ᴅᴀʀᴋᴡᴏʟꜰ_ᴍᴅ'},{ quoted: mek })   
+                await conn.sendMessage(from,{sticker: { url : data[text]},package: 'TOHID_MD'},{ quoted: mek })   
             
             }
         }
@@ -42,7 +42,7 @@ async (conn, mek, m, { from, body, isOwner }) => {
 });
 
 //auto reply 
-/*cmd({
+cmd({
   on: "body"
 },    
 async (conn, mek, m, { from, body, isOwner }) => {
@@ -58,7 +58,7 @@ async (conn, mek, m, { from, body, isOwner }) => {
             }
         }
     }                
-});*/
+});
 
 
 //fake recording
