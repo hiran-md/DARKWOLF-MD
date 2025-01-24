@@ -17,7 +17,7 @@ const search = await yts(q)
 const data = search.videos[0]
 const url = data.url
 
-let desc = `╭━━━〔 *KHANX-MD* 〕━━━┈⊷
+let desc = `╭━━━〔 *DARKWOLF-MD* 〕━━━┈⊷
 ┃▸╭───────────
 ┃▸┃๏ *MUSIC DOWNLOADER*
 ┃▸└───────────···๏
@@ -32,7 +32,7 @@ let desc = `╭━━━〔 *KHANX-MD* 〕━━━┈⊷
 ┃▸┃๏ *Ago* - ${data.ago}
 ┃▸└────────────┈⊷
 ╰━━━━━━━━━━━━━━━⪼
-> *© Pᴏᴡᴇʀᴇᴅ Bʏ Jᴀᴡᴀᴅ TᴇᴄʜX ♡*`
+> *© Pᴏᴡᴇʀᴇᴅ ʙʏ ʜɪʀᴀɴʏᴀ ꜱᴀᴛʜꜱᴀʀᴀ*`
 await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek});
 
 //download audio
@@ -51,7 +51,7 @@ reply(`${e}`)
 //===========darama-dl===========
 
 cmd({
-    pattern: "darama",
+    pattern: "vid",
     alias: ["video4","ytmp4"],    
     desc: "download video",
     category: "download",
@@ -65,7 +65,7 @@ const search = await yts(q)
 const data = search.videos[0]
 const url = data.url
 
-let des = `╭━━━〔 *KHANX-MD* 〕━━━┈⊷
+let des = `╭━━━〔 *DARKWOLF-MD* 〕━━━┈⊷
 ┃▸╭───────────
 ┃▸┃๏ *VIDEO DOWNLOADER*
 ┃▸└───────────···๏
@@ -80,7 +80,7 @@ let des = `╭━━━〔 *KHANX-MD* 〕━━━┈⊷
 ┃▸┃๏ *Ago* - ${data.ago}
 ┃▸└────────────┈⊷
 ╰━━━━━━━━━━━━━━━⪼
-> *© Pᴏᴡᴇʀᴇᴅ Bʏ Jᴀᴡᴀᴅ TᴇᴄʜX ♡*`
+> *© Pᴏᴡᴇʀᴇᴅ ʙʏ ʜɪʀᴀɴʏᴀ ꜱᴀᴛʜꜱᴀʀᴀ*`
 await conn.sendMessage(from,{image:{url: data.thumbnail},caption:des},{quoted:mek});
 
 //download video
