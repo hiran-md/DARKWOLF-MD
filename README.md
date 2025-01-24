@@ -49,6 +49,12 @@
 <p/>
 
 
+<b>GET SESSION ID VIA PAIR CODE 02</b>
+
+<p align="center">
+<a href="https://session-930h.onrender.com"><img height= "35" title="Author" src="https://img.shields.io/badge/GET SESSION ID-2:-black?style=for-the-badge&logo=render"></a>
+<p/>
+
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 
