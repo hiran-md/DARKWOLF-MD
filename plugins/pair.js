@@ -9,8 +9,8 @@ cmd({
     alias: ["getpair", "clonebot"],
     react: "✅",
     desc: "Pairing code",
-    category: "download",
-    use: ".pair ++923477868XXX",
+    category: "other",
+    use: ".pair +9477868XXX",
     filename: __filename
 }, 
 async (conn, mek, m, { from, prefix, quoted, q, reply }) => {
@@ -20,7 +20,7 @@ async (conn, mek, m, { from, prefix, quoted, q, reply }) => {
 
         // Validate input
         if (!q) {
-            return await reply("*Example -* .pair +923477868XXX");
+            return await reply("*Example -* .pair +9477868XXX");
         }
 
         // Fetch pairing code
@@ -35,7 +35,7 @@ async (conn, mek, m, { from, prefix, quoted, q, reply }) => {
 
         // Success response
         const pairingCode = pair.code;
-        const doneMessage = "> *AWAIS-MD PAIR COMPLETED*";
+        const doneMessage = "> *DARKWOLF-MD PAIR COMPLETED*";
 
         // Send first message
         await reply(`${doneMessage}\n\n*Your pairing code is:* ${pairingCode}`);
