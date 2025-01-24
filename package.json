@@ -29,7 +29,7 @@
         "@sl-code-lords/movie-api": "1.0.0",
         "@tobyg74/tiktok-api-dl": "1.0.13",
         "@vitalets/google-translate-api": "9.2.0",
-        "@whiskeysockets/baileys": "git+https://github.com/prabathLK/Baileys-6.0.0.git#master",
+        "@whiskeysockets/baileys": "6.7.9",
         "pixaldrain-sinhalasub": "git+https://github.com/DarkMakerofc/pixaldrain-sinhalasub.git",
         "api-dylux": "latest",
         "aptoide-scraper": "1.0.1",
