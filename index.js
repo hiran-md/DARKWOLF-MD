@@ -105,6 +105,7 @@ let up = `
 `;
 conn.sendMessage(conn.user.id, { image: { url: `https://raw.githubusercontent.com/hiran-md/Darkwolf-DATA_BASE/refs/heads/main/Logo/DARK_WOLF-MD.webp` }, caption: up })
 conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url:'https://raw.githubusercontent.com/hiran-md/Darkwolf-DATA_BASE/refs/heads/main/Logo/DARK_WOLF-MD.webp'}, caption: up })
+conn.sendMessage(conn.user.id, { audio: { url:`https://github.com/hiran-md/Voice-DARKWOLF/raw/refs/heads/main/connected.mp3` }, caption: '> *© ᴄʀᴇᴀᴛᴇᴅ ʙʏ ʜɪʀᴀɴʏᴀ ꜱᴀᴛʜꜱᴀʀᴀ*', mimetype: 'audio/mpeg'},{ quoted: mek })
 }
 })
 conn.ev.on('creds.update', saveCreds)  
