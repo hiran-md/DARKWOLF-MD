@@ -30,7 +30,7 @@
         "@tobyg74/tiktok-api-dl": "1.0.13",
         "@vitalets/google-translate-api": "9.2.0",
         "@whiskeysockets/baileys": "6.7.9",
-        "pixaldrain-sinhalasub": "git+https://github.com/DarkMakerofc/pixaldrain-sinhalasub.git",
+        "pixaldrain-sinhalasub": "git+https://github.com/mrsupunfernando12/pixaldrain-sinhalasub.git",
         "api-dylux": "latest",
         "aptoide-scraper": "1.0.1",
         "awesome-phonenumber": "7.2.0",
@@ -121,7 +121,7 @@
         "yt-search": "2.12.1", 
         "@mrnima/tiktok-downloader":"1.0.0",
         "@mrnima/facebook-downloader":"1.0.0",
-        "mrnima-moviedl":"1.0.0",
+        "mrnima-moviedl":"latest",
         "@dark-yasiya/yt-dl.js": "latest"
         
     }
