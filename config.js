@@ -24,4 +24,6 @@ module.exports = {
     OWNER_REACT: process.env.OWNER_REACT || "false",
     BOT_NAME: process.env.BOT_NAME || "ᴅᴀʀᴋᴡᴏʟꜰ ᴍᴅ࿐",
     OMDB_API_KEY: process.env.OMDB_API_KEY || "76cb7f39", // omdbapi.com
+    MOVIE_API_KEY: process.env.MOVIE_API_KEY || "sky|97e02fda9faf1bf4823b9ea90816a254b38969e5"
 };
+
