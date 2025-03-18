@@ -1,100 +1,114 @@
-const { WAConnection } = require('@adiwajshing/baileys');
+const { cmd } = require('../command');
+const { fetchJson } = require('../lib/functions');
 const axios = require('axios');
 const fs = require('fs-extra');
 const path = require('path');
-const express = require('express');
+const config = require('../config');
 
-const app = express();
-const API_URL = "https://cinesubz.mizta-x.com/movie-search?name=";
+const API_URL = "https://api.skymansion.site/movies-dl/search";
+const DOWNLOAD_URL = "https://api.skymansion.site/movies-dl/download";
+const API_KEY = config.MOVIE_API_KEY;
 
-// Initialize the Baileys client
-const waClient = new WAConnection();
-waClient.on('qr', (qr) => {
-    console.log('Scan this QR code to connect your WhatsApp!');
-    // You can use a library like `qrcode-terminal` to print the QR code in your terminal
-});
-waClient.on('open', () => {
-    console.log('Bot is connected!');
-});
+let movieSelections = {}; // Store user selections temporarily
 
-// Function to connect to the WhatsApp client
-async function connectWaClient() {
-    await waClient.connect();
-}
+cmd({
+    pattern: "movie",
+    alias: ["moviedl", "films"],
+    react: '🎬',
+    category: "download",
+    desc: "Search and download movies from PixelDrain",
+    filename: __filename
+}, async (robin, m, mek, { from, q, reply }) => {
+    try {
+        if (!q || q.trim() === '') return await reply('❌ Please provide a movie name! (e.g., Deadpool)');
 
-connectWaClient().catch(console.error);
+        // Fetch movie search results
+        const searchUrl = `${API_URL}?q=${encodeURIComponent(q)}&api_key=${API_KEY}`;
+        let response = await fetchJson(searchUrl);
 
-// Handle incoming messages
-waClient.ev.on('messages.upsert', async (messageUpdate) => {
-    const message = messageUpdate.messages[0];
-    if (!message || message.key.fromMe) return;
-
-    const { from, body } = message;
-    
-    // Example of how to handle a '.cine' command
-    if (body.startsWith('.cine')) {
-        const query = body.split(' ').slice(1).join(' ');  // Get the movie name after '.cine'
-
-        if (!query) {
-            await waClient.sendMessage(from, { text: '❌ Please provide a movie name!' });
-            return;
+        if (!response || !response.SearchResult || !response.SearchResult.result.length) {
+            return await reply(`❌ No results found for: *${q}*`);
         }
 
-        try {
-            // Fetch movie search results from CineSubz API
-            const searchUrl = `${API_URL}${encodeURIComponent(query)}`;
-            const response = await axios.get(searchUrl);
-            
-            if (!response.data || !response.data.results || response.data.results.length === 0) {
-                await waClient.sendMessage(from, { text: `❌ No results found for: *${query}*` });
-                return;
-            }
+        const selectedMovie = response.SearchResult.result[0]; // Select first result
+        const detailsUrl = `${DOWNLOAD_URL}/?id=${selectedMovie.id}&api_key=${API_KEY}`;
+        let detailsResponse = await fetchJson(detailsUrl);
 
-            // List first 5 results
-            let movieList = response.data.results.slice(0, 5).map((movie, index) =>
-                `${index + 1}. *${movie.title}*`
-            ).join("\n\n");
-
-            await waClient.sendMessage(from, {
-                text: `🔎 *Search Results for:* ${query}\n\n${movieList}\n\n👉 Reply with the number to get download links.`
-            });
-
-            // Wait for user response with the selected number
-            // Assuming you already have a mechanism to wait for responses
-
-            // Simulate selecting the first movie (you can customize this part for your actual logic)
-            const selectedMovie = response.data.results[0];  // Example: select the first movie
-
-            const detailsUrl = `https://cinesubz.mizta-x.com${selectedMovie.movieLink}`;
-            const detailsResponse = await axios.get(detailsUrl);
-
-            if (!detailsResponse.data || !detailsResponse.data.download || detailsResponse.data.download.length === 0) {
-                await waClient.sendMessage(from, { text: '❌ No download links found.' });
-                return;
-            }
-
-            let downloadOptions = detailsResponse.data.download.map((link, index) =>
-                `${index + 1}. *${link.quality}* - [Download](${link.url})`
-            ).join("\n\n");
-
-            await waClient.sendMessage(from, {
-                text: `🎬 *${selectedMovie.title}*\n\n📥 *Download Links:*\n\n${downloadOptions}\n\n👉 Reply with the number to start downloading.`
-            });
-
-            // Handle downloading logic here (you can integrate a download manager or direct download)
-            // For now, just acknowledge
-            await waClient.sendMessage(from, {
-                text: `✅ *Download process initiated for*: ${selectedMovie.title}`
-            });
-
-        } catch (error) {
-            console.error('Error during CineSubz movie search:', error);
-            await waClient.sendMessage(from, { text: '❌ Something went wrong. Please try again later.' });
+        if (!detailsResponse || !detailsResponse.downloadLinks || !detailsResponse.downloadLinks.result.links.driveLinks.length) {
+            return await reply('❌ No download links found.');
         }
+
+        // Store available download links for the user
+        const driveLinks = detailsResponse.downloadLinks.result.links.driveLinks;
+        movieSelections[from] = { movie: selectedMovie, links: driveLinks };
+
+        // Prepare quality selection message
+        let qualityOptions = driveLinks.map((link, index) => `*${index + 1}.* ${link.quality}`).join("\n");
+        let msg = `🎬 *${selectedMovie.title}* (${selectedMovie.year})\n📌 *IMDB:* ${selectedMovie.rating}\n\n🎥 *Available Qualities:*\n${qualityOptions}\n\n📥 *Reply with the quality number to download!*`;
+
+        await reply(msg);
+    } catch (error) {
+        console.error('Error in movie command:', error);
+        await reply('❌ Sorry, something went wrong. Please try again later.');
     }
 });
 
-// Start the Express server (optional, for any web-related handling)
-app.listen(3000, () => {
-    console.log('Express server is running on port 3000');
+// Handle quality selection and download
+cmd({
+    pattern: "quality",
+    alias: ["q"],
+    category: "download",
+    desc: "Select a movie quality to download",
+    filename: __filename
+}, async (robin, m, mek, { from, q, reply }) => {
+    try {
+        if (!movieSelections[from]) return await reply('❌ No movie selected. Please search for a movie first.');
+
+        let userSelection = parseInt(q);
+        let availableLinks = movieSelections[from].links;
+
+        if (isNaN(userSelection) || userSelection < 1 || userSelection > availableLinks.length) {
+            return await reply('❌ Invalid selection! Reply with a valid quality number.');
+        }
+
+        let selectedDownload = availableLinks[userSelection - 1]; // Get selected quality
+        const fileId = selectedDownload.link.split('/').pop();
+        const directDownloadLink = `https://pixeldrain.com/api/file/${fileId}?download`;
+
+        // Download the movie
+        const filePath = path.join(__dirname, `${movieSelections[from].movie.title}-${selectedDownload.quality}.mp4`);
+        const writer = fs.createWriteStream(filePath);
+
+        const { data } = await axios({
+            url: directDownloadLink,
+            method: 'GET',
+            responseType: 'stream'
+        });
+
+        data.pipe(writer);
+
+        writer.on('finish', async () => {
+            // Send the downloaded file
+            await robin.sendMessage(from, {
+                document: fs.readFileSync(filePath),
+                mimetype: 'video/mp4',
+                fileName: `${movieSelections[from].movie.title}-${selectedDownload.quality}.mp4`,
+                caption: `🎬 *${movieSelections[from].movie.title}*\n📌 Quality: ${selectedDownload.quality}\n✅ *Download Complete!*`,
+                quoted: mek
+            });
+
+            // Cleanup
+            fs.unlinkSync(filePath);
+            delete movieSelections[from]; // Remove user's selection after sending
+        });
+
+        writer.on('error', async (err) => {
+            console.error('Download Error:', err);
+            await reply('❌ Failed to download movie. Please try again.');
+        });
+
+    } catch (error) {
+        console.error('Error in quality selection and download:', error);
+        await reply('❌ Sorry, something went wrong. Please try again.');
+    }
 });
